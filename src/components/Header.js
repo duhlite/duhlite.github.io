@@ -18,7 +18,7 @@ function Header() {
                     <Button component={Link} to="/about">
                         About
                     </Button>
-                    <Button componennt={Link} to="/portfolio">
+                    <Button component={Link} to="/portfolio">
                         Portfolio
                     </Button>
                 </Toolbar>

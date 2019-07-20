@@ -3,14 +3,16 @@ import  grey from "@material-ui/core/colors/grey";
 
 export default createMuiTheme({
     palette: {
-        primary: grey
+        primary: {
+            main: '#bdbdbd',
+        }
     },
     overrides: {
         MuiButton: {
             root: {
                 color: 'white',
                 '&:hover': {
-                    backgroundColor: 'black'
+                    backgroundColor: grey[500]
                 }
             }
         }
