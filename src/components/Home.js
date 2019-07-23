@@ -1,20 +1,17 @@
 import React from 'react';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { HashRouter as Router, Link, Route } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography' 
 
 import theme from '../theme/theme';
-import Background from '../theme/background.png';
 import About from "./About";
 import Contact from "./Contact";
 import Portfolio from "./Portfolio";
-import Intro from "./Intro";
 
 const Back = {
-    backgroundImage: 'url('+Background+')',
     height: '100vh'
 }
 
@@ -71,7 +68,6 @@ export default class Home extends React.Component {
                     <Route path="/about" component={About} />
                     <Route path="/portfolio" component={Portfolio} />
                     <Route path="/contact" component={Contact} />
-                    
                 </MuiThemeProvider>
             </Router> 
         )
