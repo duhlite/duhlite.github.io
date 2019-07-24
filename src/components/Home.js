@@ -49,7 +49,7 @@ export default class Home extends React.Component {
                         <p style={Text}>A full stack developer</p>
                         <p style={Text}>View my <Link to="/about" onClick={e => this.handleClick(e)}>work</Link>.</p>
                     </div>
-                    <AppBar position="static" id="nav" ref={this.domElem}>
+                    <AppBar position="static" id="nav" ref={this.domElem} style={{marginBottom: '10vh'}}>
                         <Toolbar>
                             <Typography variant="h6" style={brandStyle} >
                                 Travis Mingalone
