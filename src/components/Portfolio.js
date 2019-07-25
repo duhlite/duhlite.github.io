@@ -12,7 +12,8 @@ import links from '../constants/portfolioLinks';
 
 const Body = {
     height: "100vh",
-    flexGrow: 1
+    flexGrow: 1,
+    overflowX: "hidden"
 }
 
 const CardStyle = {
@@ -29,7 +30,7 @@ export default class Portfolio extends Component {
     render() {
       return (
           <div style={Body}>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} justify="space-evenly">
               {
                 links.map((link, i) => {
                   return (
