@@ -16,17 +16,23 @@ import Portfolio from "./Portfolio";
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            isHidden: 'hidden'
+        }
         this.domElem = React.createRef();
     }
 
     handleClick = (event) => {
+        this.setState({
+            isHidden: 'visible'
+        });
         if(this.domElem.current) {
             setTimeout(() => {
                 this.domElem.current.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                });
-            }, 100);
+            }, 200);
         }
     }
     
@@ -38,7 +44,8 @@ export default class Home extends React.Component {
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <Typography 
-                                    variant="h2" 
+                                    variant="h2"
+                                    component="h4" 
                                     className="splash"
                                     id="name">
                                     Hello, I'm Travis Mingalone
@@ -48,6 +55,7 @@ export default class Home extends React.Component {
                                 <Typography 
                                     variant="h3" 
                                     className="splash"
+                                    component="p"
                                     id="title">
                                     A Full Stack Developer
                                 </Typography>
@@ -67,7 +75,7 @@ export default class Home extends React.Component {
                     <AppBar 
                         position="static" 
                         id="nav" ref={this.domElem} 
-                        style={{marginBottom: '10vh'}}>
+                        style={{marginBottom: '10vh', visibility: `${this.state.isHidden}`}}>
                         <Toolbar>
                             <Typography variant="h6" id="brand">
                                 Travis Mingalone

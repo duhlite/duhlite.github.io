@@ -1,43 +1,70 @@
 import React from 'react';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-
-import theme from '../theme/theme';
-import { Card, CardContent, Typography, Grid } from '@material-ui/core';
+import { Card, CardContent, Typography, Grid, Link, makeStyles } from '@material-ui/core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-const linkStyle = {
-    float: 'left',
-    marginRight: '1vw'
-}
+import theme from '../theme/theme';
+
+const useStyles = makeStyles(theme => ({
+    bg: {
+        height: '82vh'
+    },
+    contact: {
+        maxWidth: 345,
+        margin: 'auto'
+    },
+    link: {
+        marginLeft: '100px'
+    },
+    icon: {
+        marginRight: '1vw'
+    }
+}));
 
 export default function Contact() {
+    const classes = useStyles();
+
     return (
         <MuiThemeProvider theme={theme}>
-            <div style={{height: '82vh'}}>
-                <Card style={{maxWidth: 345, margin: 'auto'}}>
+            <div className={classes.bg}>
+                <Card className={classes.contact}>
                     <CardContent>
-                        <Typography variant="h6" style={{marginBottom: '3vh'}} >
-                            My existence on the Internet
-                        </Typography>
-                        <Grid container spacing={2}>
-                            <Grid item xs={7}>
-                                <FontAwesomeIcon icon={faGithub} style={linkStyle}/>
-                                <Typography variant="body2">
-                                    <a href="https://www.github.com/duhlite">Github</a>
-                                </Typography>
-                            </Grid>
-                            <Grid item xs={6}>
-                                <FontAwesomeIcon icon={faLinkedin} style={linkStyle} />
-                                <Typography variant="body2">
-                                    <a href="https://www.linkedin.com/in/travis-mingalone/">LinkedIn</a>
-                                </Typography>
-                            </Grid>
+                        <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <FontAwesomeIcon icon={faEnvelope} style={linkStyle} />
-                                <Typography variant="body2">
-                                    <a href="mailto:travismingalone@gmail.com">Email</a>
+                                <Typography variant="h4" style={{textAlign: "center"}} >
+                                    Find me here!
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} >
+                                <Typography variant="h6" className={classes.link}>
+                                    <Link 
+                                        href={'https://www.github.com/duhlite'}
+                                        target="_blank"
+                                        rel="noopener">
+                                        <FontAwesomeIcon icon={faGithub} className={classes.icon} size="lg"/>
+                                        Github
+                                    </Link>
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} >
+                                <Typography variant="h6" className={classes.link}>
+                                    <Link 
+                                        href={"https://www.linkedin.com/in/travis-mingalone/"}
+                                        target="_blank"
+                                        rel="noopener">
+                                        <FontAwesomeIcon icon={faLinkedin} className={classes.icon} size="lg"/>
+                                        LinkedIn
+                                    </Link>
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} >
+                                <Typography variant="h6" className={classes.link}>
+                                    <Link href={"mailto:travismingalone@gmail.com"}>
+                                        <FontAwesomeIcon icon={faEnvelope} className={classes.icon} size="lg"/>
+                                        Email
+                                    </Link>
                                 </Typography>
                             </Grid>
                         </Grid>
