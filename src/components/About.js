@@ -1,13 +1,28 @@
 import React from "react";
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { Paper, Typography } from "@material-ui/core";
+
+import theme from '../theme/theme'
 
 const Body = {
-    height: '100vh'
+    height: '82vh'
 }
 
 export default function About() {
     return (
-        <div style={Body}>
-            <h1>About</h1>
-        </div>
+        <MuiThemeProvider theme={theme}>
+            <div style={Body}>
+                <Paper>
+                    <Typography variant="h6">
+                        Passion
+                    </Typography>
+                </Paper>
+                <Paper>
+                    <Typography variant="h6">
+                        Skills
+                    </Typography>
+                </Paper>
+            </div>
+        </MuiThemeProvider>
     )
 }
