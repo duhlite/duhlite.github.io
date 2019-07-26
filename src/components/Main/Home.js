@@ -7,11 +7,11 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography' 
 
-import theme from '../theme/theme';
+import theme from '../../theme/theme';
 import './Home.css';
-import About from "./About";
-import Contact from "./Contact";
-import Portfolio from "./Portfolio";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
+import Portfolio from "../Portfolio/Portfolio";
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -94,6 +94,9 @@ export default class Home extends React.Component {
                     <Route path="/about" component={About} />
                     <Route path="/portfolio" component={Portfolio} />
                     <Route path="/contact" component={Contact} />
+                    <footer style={{color:`${theme.palette.primary.main}`, margin: 'auto'}} >
+                        Copyright © Travis Mingalone 2019
+                    </footer>
                 </MuiThemeProvider>
             </Router> 
         )

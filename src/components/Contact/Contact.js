@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import theme from '../theme/theme';
+import theme from '../../theme/theme';
 
 const useStyles = makeStyles(theme => ({
     bg: {
-        height: '82vh'
+        height: '80vh',
+        overflowX: 'hidden'
     },
     contact: {
         maxWidth: 345,

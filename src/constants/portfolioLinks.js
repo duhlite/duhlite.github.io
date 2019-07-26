@@ -6,7 +6,7 @@ const links = [
         image: garden,
         title: "Gardening ToolKit Home",
         main: "Gardening ToolKit",
-        secondary: "Gardening Web App, created with React.js, Node.js, Express.js, and AWS.",
+        secondary: "Gardening Web App, allows users to add garden beds and crops, and advises on future crops based on a 5 year rotation cycle. Created with React.js, Node.js, Express.js, and AWS.",
         link: "https://confident-wiles-0228d9.netlify.com/",
         git: "https://github.com/duhlite/gardening-app-api"
     },

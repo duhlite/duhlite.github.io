@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography' 
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 
-import theme from '../theme/theme';
+import theme from '../../theme/theme';
 
 var brandStyle = {
     flex: '1'
