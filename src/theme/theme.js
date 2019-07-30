@@ -18,6 +18,11 @@ export default createMuiTheme({
                     backgroundColor: '#546e7a'
                 }
             }
+        },
+        AppBar: {
+            root: {
+                marginBottom: '0vh'
+            }
         }
     }
 })

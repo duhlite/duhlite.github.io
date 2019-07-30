@@ -16,7 +16,7 @@ export default class Portfolio extends Component {
     render() {
       return (
           <div style={Body}>
-            <Grid container spacing={3} justify="space-evenly">
+            <Grid container spacing={3} justify="space-evenly" alignItems="center">
               {
                 links.map((link, i) => {
                   return (

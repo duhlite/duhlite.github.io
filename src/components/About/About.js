@@ -1,6 +1,6 @@
 import React from "react";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import { Paper, Typography, Card, CardContent, Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 
 import theme from '../../theme/theme';
 import AboutCard from './AboutCard';
