@@ -24,7 +24,7 @@ export default class AboutCard extends Component {
                                   {this.props.body.map((words, i) => {
                                       return (
                                           <div key={i}>
-                                              <Typography variant="h6">
+                                              <Typography variant="h6" style={{textAlign: 'left'}}>
                                                   {words}
                                                   <br /><br />
                                               </Typography>
